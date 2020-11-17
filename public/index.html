@@ -1,17 +1,181 @@
 <!doctype html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Hello Bulma!</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
-    <script defer  type="text/javascript" src="https://use.fontawesome.com/releases/v5.14.0/js/all.js"></script>
-  </head>
-  <body>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hello Bulma!</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+  <script defer type="text/javascript" src="https://use.fontawesome.com/releases/v5.14.0/js/all.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- Design layout Strts Here -->
+  <header class="has-background-link py-5 has-text-white">
     <div class="container">
-      <h1>Bulma</h1>
-      <button class="button is-info is-light">Info</button>
+      <div class="columns">
+        <div class="column">
+          <span class="icon">
+            <i class="far fa-envelope"></i>
+          </span>
+          taavoni@bpmo.ir
+        </div>
+        <div class="column">
+          <span class="icon">
+            <i class="fas fa-phone-volume"></i>
+          </span>
+          +77-3166-3201
+        </div>
+        <div class="column has-text-right-tablet">
+          <span class="icon">
+            <i class="fas fa-headphones-alt"></i>
+          </span>
+          Support
+        </div>
+      </div>
     </div>
-    <script src="/reload/reload.js"></script>
-  </body>
+  </header>
+  <section class="section" id="hero">
+    <div class="container">
+      <nav class="navbar is-transparent" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="https://bulma.io">
+            <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
+          </a>
+
+          <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
+            data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+
+        <div id="navbarBasicExample" class="navbar-menu">
+          <div class="navbar-start">
+            <a class="navbar-item has-text-white">
+              Home
+            </a>
+
+            <a class="navbar-item has-text-white">
+              Services
+            </a>
+
+            <div class="navbar-item has-dropdown is-hoverable  has-text-white">
+              <a class="navbar-link">
+                More
+              </a>
+
+              <div class="navbar-dropdown">
+                <a class="navbar-item">
+                  About
+                </a>
+                <a class="navbar-item">
+                  Jobs
+                </a>
+                <a class="navbar-item">
+                  Contact
+                </a>
+                <hr class="navbar-divider">
+                <a class="navbar-item">
+                  Report an issue
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="navbar-end">
+            <div class="navbar-item">
+              <div class="buttons">
+                <a class="button is-info">
+                  <strong>Sign up</strong>
+                </a>
+                <a class="button is-warning">
+                  Log in
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div class="columns pt-6">
+        <div class="column mt-6">
+          <span class="icon has-text-warning">
+            <i class="far fa-chart-bar fa-lg"></i>
+          </span>
+          <h1 class="is-size-1 has-text-white">
+            Web design <br/>
+            & App Development
+          </h1>
+          <p class="has-text-white">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Voluptatum dolores eos harum qui! Optio recusandae nam debitis similique hic.
+            Odit repellat minus tempora incidunt unde architecto explicabo aspernatur quo alias?
+          </p>
+          <button class="button is-warning mt-4">Learn more</button>
+        </div>
+        <div class="column mt-6">
+          <img src="img/hero.png" alt="Hero image">
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section" id="services">
+    <div class="container">
+      <div class="has-text-centered">
+        <h2 class="title is-2">
+          Full service web development agency
+        </h2>
+        <h6 class="is-6 subtitle has-text-grey">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum
+        </h6>
+      </div>
+      <div class="columns pt-6">
+        <div class="column">
+          <div class="card">
+            <div class="card-content">
+              <div class="has-text-centered">
+                <span class="icon is-size-1 py-6 my-3">
+                  <i class="fas fa-code"></i>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section" id="contact"></section>
+  <!-- Design layout Ends Here -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+      // Get all "navbar-burger" elements
+      const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+      // Check if there are any navbar burgers
+      if ($navbarBurgers.length > 0) {
+
+        // Add a click event on each of them
+        $navbarBurgers.forEach(el => {
+          el.addEventListener('click', () => {
+
+            // Get the target from the "data-target" attribute
+            const target = el.dataset.target;
+            const $target = document.getElementById(target);
+
+            // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+            el.classList.toggle('is-active');
+            $target.classList.toggle('is-active');
+
+          });
+        });
+      }
+
+    });
+  </script>
+  <script src="/reload/reload.js"></script>
+</body>
+
 </html>

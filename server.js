@@ -9,9 +9,11 @@ var app = express()
 
 var publicDir = path.join(__dirname, 'public')
 
+
 app.set('port', process.env.PORT || 3000)
 app.use(logger('dev'))
 app.use(bodyParser.json()) // Parses json, multi-part (file), url-encoded
+app.use(express.static(__dirname + '/public'));
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(publicDir, 'index.html'))
